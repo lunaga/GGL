@@ -43,6 +43,11 @@ export function Footer() {
               </li>
               <li>
                 <Link href="#servicios" className="hover:text-primary transition-colors">
+                  Heladeras Familiares
+                </Link>
+              </li>
+              <li>
+                <Link href="#servicios" className="hover:text-primary transition-colors">
                   Heladeras Comerciales
                 </Link>
               </li>
@@ -59,11 +64,6 @@ export function Footer() {
               <li>
                 <Link href="#servicios" className="hover:text-primary transition-colors">
                   Fabricación a Medida
-                </Link>
-              </li>
-              <li>
-                <Link href="#servicios" className="hover:text-primary transition-colors">
-                  Mantenimiento
                 </Link>
               </li>
             </ul>

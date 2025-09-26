@@ -11,17 +11,30 @@ const services = [
     features: [
       "Instalación profesional",
       "Reparación de averías",
-      "Mantenimiento preventivo",
+      "Mantenimiento preventivo (Limpieza y sanatización de unidades interiores)",
       "Carga de gas refrigerante",
+      "Reparaciones de fuga de refrigerante",
+      "Reparación de plaquetas electrónicas",
     ],
+    image: "/modern-air-conditioning-unit-installation.jpg",
     whatsappMessage:
       "Hola!%20Quería%20consultar%20por%20instalación/reparación%20de%20aire%20acondicionado.%20¿Podrían%20brindarme%20información%20y%20presupuesto?",
   },
   {
     icon: Refrigerator,
+    title: "Heladeras Familiares",
+    description: "Servicio técnico especializado en heladeras familiares No Frost.",
+    features: ["Cambbio de compresores", "Cambio de termostatos", "Reparación de fugas", "Cambio de plaquetas electrónicas", "Cambio de burletes", "Conversión de equipos electrónicos a electromecánicos"],
+    image: "/commercial-refrigerator-repair-service.jpg",
+    whatsappMessage:
+      "Hola!%20Necesito%20servicio%20técnico%20para%20heladeras%20comerciales.%20¿Podrían%20ayudarme%20con%20información%20y%20presupuesto?",
+  },
+    {
+    icon: Refrigerator,
     title: "Heladeras Comerciales",
-    description: "Servicio técnico especializado en heladeras familiares y comerciales de todas las marcas.",
-    features: ["Reparación de compresores", "Cambio de termostatos", "Reparación de fugas", "Mantenimiento general"],
+    description: "Servicio técnico especializado en heladeras comerciales .",
+    features: ["Cambio de compresores", "Cambio de termostatos", "Reparación de fugas", "Mantenimiento general", "Fabricación de heladeras a medida"],
+    image: "/commercial-refrigerator-repair-service.jpg",
     whatsappMessage:
       "Hola!%20Necesito%20servicio%20técnico%20para%20heladeras%20comerciales.%20¿Podrían%20ayudarme%20con%20información%20y%20presupuesto?",
   },
@@ -29,33 +42,19 @@ const services = [
     icon: Snowflake,
     title: "Cámaras Frigoríficas",
     description: "Especialistas en cámaras de frío de baja y media temperatura para uso comercial e industrial.",
-    features: ["Instalación completa", "Reparación de sistemas", "Control de temperatura", "Aislamiento térmico"],
+    features: ["Instalación completa", "Reparación de sistemas", "Control de temperatura", "Aislamiento térmico", "Cambio de compresores", "Control y reparación de tableros eléctricos", "Armado y desarmado de cámaras frigoríficas"],
+    image: "/industrial-cold-storage-room-installation.jpg",
     whatsappMessage:
       "Hola!%20Me%20interesa%20información%20sobre%20cámaras%20frigoríficas%20y%20su%20mantenimiento.%20¿Podrían%20ayudarme?",
   },
   {
     icon: WashingMachine,
     title: "Lavarropas",
-    description: "Reparación y mantenimiento de lavarropas automáticos y semiautomáticos.",
-    features: ["Reparación de motores", "Cambio de bombas", "Reparación electrónica", "Mantenimiento preventivo"],
+    description: "Reparación de lavarropas automáticos y semiautomáticos.",
+    features: ["Cambio y reparación de motores", "Cambio de bombas de desagote, valvulas de carga de entradas", "Cambio de rodamientos y soportes de los mismos", "Cambio de fuellles", "Reparación electrónica", "Instalación de lavarropas"],
+    image: "/washing-machine-repair-service.jpg",
     whatsappMessage:
       "Hola!%20Tengo%20un%20problema%20con%20mi%20lavarropas%20y%20necesito%20servicio%20técnico.%20¿Podrían%20ayudarme?",
-  },
-  {
-    icon: Settings,
-    title: "Fabricación a Medida",
-    description: "Fabricamos heladeras comerciales bajomesadas y verticales según sus necesidades específicas.",
-    features: ["Diseño personalizado", "Heladeras bajomesadas", "Heladeras verticales", "Múltiples puertas"],
-    whatsappMessage:
-      "Hola!%20Me%20interesa%20la%20fabricación%20a%20medida%20de%20equipos%20de%20refrigeración%20comercial.%20¿Podrían%20brindarme%20información?",
-  },
-  {
-    icon: Wrench,
-    title: "Mantenimiento Integral",
-    description: "Planes de mantenimiento preventivo para empresas y comercios.",
-    features: ["Contratos de mantenimiento", "Revisiones periódicas", "Servicio prioritario", "Garantía extendida"],
-    whatsappMessage:
-      "Hola!%20Me%20interesa%20información%20sobre%20planes%20de%20mantenimiento%20preventivo%20para%20mi%20empresa.%20¿Podrían%20ayudarme?",
   },
 ]
 
