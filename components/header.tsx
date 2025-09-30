@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Phone, MessageCircle } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -81,6 +82,7 @@ export function Header() {
 
           {/* Contact Buttons */}
           <div className="hidden md:flex items-center space-x-2">
+            <ThemeToggle />
             <Button variant="outline" size="sm" asChild>
               <a href="tel:+5491158066309" className="flex items-center space-x-1">
                 <Phone className="h-4 w-4" />
@@ -101,9 +103,12 @@ export function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <Button variant="ghost" size="sm" className="md:hidden" onClick={toggleMenu}>
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </Button>
+          <div className="flex items-center space-x-2 md:hidden">
+            <ThemeToggle />
+            <Button variant="ghost" size="sm" onClick={toggleMenu}>
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

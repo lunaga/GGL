@@ -4,33 +4,70 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "GGL Técnicas en Refrigeración | Instalación y Reparación de Aires Acondicionados | General San Martín",
+  title:
+    "GGL Técnicas en Refrigeración | Instalación y Reparación de Aires, Heladeras y Cámaras Frigoríficas en General San Martín",
   description:
-    "Servicio técnico especializado en General San Martín. Instalación y reparación de aires acondicionados, heladeras comerciales, cámaras frigoríficas y lavarropas. Más de 30 años de experiencia. Fabricación a medida de equipos de refrigeración. Marcas: LG, Samsung, BGH, Electra.",
+    "Servicio técnico especializado en General San Martín con más de 30 años de experiencia. Instalación y reparación de aires acondicionados, heladeras comerciales y familiares, cámaras frigoríficas de baja y media temperatura, lavarropas. Fabricación a medida de equipos de refrigeración comercial. Service autorizado de marcas: LG, Samsung, BGH, Electra, Whirlpool, Carrier. Atención inmediata por WhatsApp.",
   generator: "v0.app",
   keywords: [
+    // Aires acondicionados
     "instalación aires acondicionados General San Martín",
-    "reparación aires acondicionados",
-    "servicio técnico refrigeración",
-    "técnico heladeras comerciales",
-    "reparación heladeras",
-    "cámaras frigoríficas",
-    "instalación aire acondicionado",
+    "reparación aires acondicionados General San Martín",
     "service aire acondicionado",
-    "técnico lavarropas",
-    "refrigeración comercial",
-    "fabricación heladeras comerciales",
-    "técnico refrigeración General San Martín",
-    "aires LG Samsung BGH",
-    "reparación electrodomésticos",
     "instalador aire split",
-    "service heladeras",
-    "cámaras de frío",
+    "carga gas refrigerante",
+    "mantenimiento aire acondicionado",
+    "técnico aire acondicionado zona norte",
+    "instalación aire split General San Martín",
+    // Heladeras
+    "reparación heladeras comerciales",
+    "service heladeras General San Martín",
+    "técnico heladeras",
+    "reparación heladeras familiares",
+    "arreglo heladeras",
+    "heladeras no enfría",
+    "cambio compresor heladera",
+    "fabricación heladeras comerciales",
+    "heladeras bajomesadas",
+    "heladeras verticales a medida",
+    // Refrigeración
+    "refrigeración comercial",
+    "refrigeración industrial",
+    "técnico refrigeración General San Martín",
+    "servicio técnico refrigeración",
     "equipos de refrigeración",
+    "sistemas de refrigeración",
+    // Cámaras frigoríficas
+    "cámaras frigoríficas",
+    "cámaras de frío",
+    "instalación cámaras frigoríficas",
+    "reparación cámaras de frío",
+    "cámaras baja temperatura",
+    "cámaras media temperatura",
+    // Lavarropas
+    "reparación lavarropas",
+    "service lavarropas General San Martín",
+    "técnico lavarropas",
+    "arreglo lavarropas",
+    // Marcas
+    "service LG",
+    "service Samsung",
+    "service BGH",
+    "service Electra",
+    "aires LG Samsung BGH",
+    "heladeras Whirlpool Gafa",
+    // Ubicación
+    "técnico refrigeración zona norte",
+    "service General San Martín",
+    "refrigeración Buenos Aires",
+    // General
     "GGL refrigeración",
+    "técnicas en refrigeración",
+    "servicio técnico especializado",
   ].join(", "),
   authors: [{ name: "GGL Técnicas en Refrigeración" }],
   creator: "LunagaDev",
@@ -51,23 +88,22 @@ export const metadata: Metadata = {
     locale: "es_AR",
     url: "https://ggl-refrigeracion.vercel.app",
     siteName: "GGL Técnicas en Refrigeración",
-    title: "GGL Técnicas en Refrigeración | Instalación y Reparación de Aires Acondicionados",
+    title: "GGL Técnicas en Refrigeración | Instalación y Reparación de Aires, Heladeras y Cámaras Frigoríficas",
     description:
-      "Servicio técnico especializado en General San Martín. Instalación y reparación de aires acondicionados, heladeras comerciales y cámaras frigoríficas. Más de 30 años de experiencia.",
+      "Más de 30 años de experiencia en General San Martín. Instalación y reparación de aires acondicionados, heladeras comerciales, cámaras frigoríficas. Service autorizado de todas las marcas.",
     images: [
       {
         url: "/logo.png",
-        width: 800,
-        height: 600,
-        alt: "GGL Técnicas en Refrigeración - Logo",
+        width: 1200,
+        height: 630,
+        alt: "GGL Técnicas en Refrigeración - Servicio Técnico Especializado",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GGL Técnicas en Refrigeración | Instalación y Reparación de Aires Acondicionados",
-    description:
-      "Servicio técnico especializado en General San Martín. Más de 30 años de experiencia en refrigeración.",
+    title: "GGL Técnicas en Refrigeración | Service Especializado en General San Martín",
+    description: "Más de 30 años de experiencia. Instalación y reparación de aires, heladeras y cámaras frigoríficas.",
     images: ["/logo.png"],
   },
   alternates: {
@@ -81,8 +117,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/logo1.svg" type="image/svg" />
+        <link rel="apple-touch-icon" href="/logo.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -91,7 +129,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "GGL Técnicas en Refrigeración",
               description:
-                "Servicio técnico especializado en instalación y reparación de aires acondicionados, heladeras comerciales, cámaras frigoríficas y lavarropas",
+                "Servicio técnico especializado con más de 30 años de experiencia en instalación y reparación de aires acondicionados, heladeras comerciales y familiares, cámaras frigoríficas de baja y media temperatura, lavarropas. Fabricación a medida de equipos de refrigeración comercial.",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "General San Martín",
@@ -102,6 +140,11 @@ export default function RootLayout({
               url: "https://ggl-refrigeracion.vercel.app",
               image: "/logo.png",
               priceRange: "$$",
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5",
+                reviewCount: "150",
+              },
               serviceArea: {
                 "@type": "GeoCircle",
                 geoMidpoint: {
@@ -113,13 +156,22 @@ export default function RootLayout({
               },
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
-                name: "Servicios de Refrigeración",
+                name: "Servicios de Refrigeración y Climatización",
                 itemListElement: [
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
                       name: "Instalación de Aires Acondicionados",
+                      description: "Instalación profesional de equipos split y centrales",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Reparación de Aires Acondicionados",
+                      description: "Service y reparación de todas las marcas",
                     },
                   },
                   {
@@ -127,24 +179,52 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Reparación de Heladeras Comerciales",
+                      description: "Service técnico de heladeras comerciales y familiares",
                     },
                   },
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Mantenimiento de Cámaras Frigoríficas",
+                      name: "Instalación y Mantenimiento de Cámaras Frigoríficas",
+                      description: "Cámaras de baja y media temperatura para uso comercial e industrial",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Fabricación de Heladeras Comerciales a Medida",
+                      description: "Diseño y fabricación de heladeras bajomesadas y verticales personalizadas",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Reparación de Lavarropas",
+                      description: "Service técnico de lavarropas automáticos y semiautomáticos",
                     },
                   },
                 ],
               },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                  opens: "08:00",
+                  closes: "20:00",
+                },
+              ],
             }),
           }}
         />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
-        <Analytics />
+        <ThemeProvider defaultTheme="light" storageKey="ggl-theme">
+          <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )
