@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 const services = [
   {
-    image: "/aire-acondicionado-split-instalado-en-pared.jpg",
+    image: "/aire-acondicionado-split-instalado-en-pared.png",
     title: "Aires Acondicionados",
     description:
       "Instalación, reparación y mantenimiento de equipos de aire acondicionado residenciales y comerciales.",
@@ -19,7 +19,7 @@ const services = [
       "Hola!%20Quería%20consultar%20por%20instalación/reparación%20de%20aire%20acondicionado.%20¿Podrían%20brindarme%20información%20y%20presupuesto?",
   },
   {
-    image: "/heladera-comercial-vertical-de-acero-inoxidable.jpg",
+    image: "/heladera-comercial-vertical-de-acero-inoxidable.png",
     title: "Heladeras Familiares",
     description: "Servicio técnico especializado en heladeras familiares No Frost.",
     features: ["Cambio de compresores", "Cambio de termostatos", "Reparación de fugas", "Cambio de plaquetas electrónicas", "Cambio de burletes", "Conversión de equipos electrónicos a electromecánicos"],
@@ -35,7 +35,7 @@ const services = [
       "Hola!%20Necesito%20servicio%20técnico%20para%20heladeras%20comerciales.%20¿Podrían%20ayudarme%20con%20información%20y%20presupuesto?",
   },
   {
-    image: "/c-mara-frigor-fica-industrial-con-puerta-de-acero.jpg",
+    image: "/c-mara-frigor-fica-industrial-con-puerta-de-acero.png",
     title: "Cámaras Frigoríficas",
     description: "Especialistas en cámaras de frío de baja y media temperatura para uso comercial e industrial.",
     features: ["Instalación completa", "Reparación de sistemas", "Control de temperatura", "Aislamiento térmico", "Cambio de compresores", "Control y reparación de tableros eléctricos", "Armado y desarmado de cámaras frigoríficas"],
@@ -53,8 +53,8 @@ const services = [
   {
     image: "/heladera-comercial-bajomesada-de-acero-inoxidable.jpg",
     title: "Fabricación a Medida",
-    description: "Fabricamos heladeras comerciales bajomesadas y verticales según sus necesidades específicas.",
-    features: ["Diseño personalizado", "Heladeras bajomesadas", "Heladeras verticales", "Múltiples puertas"],
+    description: "Fabricamos cámaras frigoríficas a medida y heladeras comerciales (bajomesadas y verticales según sus necesidades específicas).",
+    features: ["Diseño personalizado", "Heladeras bajomesadas", "Heladeras verticales", "Cámaras de baja y media temperatura"],
     whatsappMessage:
       "Hola!%20Me%20interesa%20la%20fabricación%20a%20medida%20de%20equipos%20de%20refrigeración%20comercial.%20¿Podrían%20brindarme%20información?",
   },
@@ -74,11 +74,11 @@ export function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="hover-lift transition-smooth group overflow-hidden">
-              <div className="aspect-video relative overflow-hidden">
+              <div className="h-64 relative overflow-hidden bg-muted">
                 <img
                   src={service.image || "/placeholder.svg"}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <CardHeader>
