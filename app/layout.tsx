@@ -5,7 +5,8 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { ThemeProvider } from "@/components/theme-provider"
-import "./globals.css"
+import "./globals.css";
+
 
 export const metadata: Metadata = {
   title:
@@ -119,8 +120,14 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth" suppressHydrationWarning>
       <head>
+        {/* Íconos */}
         <link rel="icon" href="/logo1.svg" type="image/svg" />
         <link rel="apple-touch-icon" href="/logo.png" />
+
+        {/* ✅ Estilos globales cargados desde /public */}
+        <link rel="stylesheet" href="/globals.css" />
+
+        {/* SEO / Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -163,7 +170,8 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Instalación de Aires Acondicionados",
-                      description: "Instalación profesional de equipos split y centrales",
+                      description:
+                        "Instalación profesional de equipos split y centrales",
                     },
                   },
                   {
@@ -179,7 +187,8 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Reparación de Heladeras Comerciales",
-                      description: "Service técnico de heladeras comerciales y familiares",
+                      description:
+                        "Service técnico de heladeras comerciales y familiares",
                     },
                   },
                   {
@@ -187,7 +196,8 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Instalación y Mantenimiento de Cámaras Frigoríficas",
-                      description: "Cámaras de baja y media temperatura para uso comercial e industrial",
+                      description:
+                        "Cámaras de baja y media temperatura para uso comercial e industrial",
                     },
                   },
                   {
@@ -195,7 +205,8 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Fabricación de Heladeras Comerciales a Medida",
-                      description: "Diseño y fabricación de heladeras bajomesadas y verticales personalizadas",
+                      description:
+                        "Diseño y fabricación de heladeras bajomesadas y verticales personalizadas",
                     },
                   },
                   {
@@ -203,7 +214,8 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Reparación de Lavarropas",
-                      description: "Service técnico de lavarropas automáticos y semiautomáticos",
+                      description:
+                        "Service técnico de lavarropas automáticos y semiautomáticos",
                     },
                   },
                 ],
@@ -211,7 +223,14 @@ export default function RootLayout({
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                  ],
                   opens: "08:00",
                   closes: "20:00",
                 },
