@@ -86,7 +86,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_AR",
-    url: "https://ggl-refrigeracion.vercel.app",
+    url: "https://gglrefrigeracion.com",
     siteName: "GGL Técnicas en Refrigeración",
     title: "GGL Técnicas en Refrigeración | Instalación y Reparación de Aires, Heladeras y Cámaras Frigoríficas",
     description:
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
     images: ["/logo.png"],
   },
   alternates: {
-    canonical: "https://ggl-refrigeracion.vercel.app",
+    canonical: "https://gglrefrigeracion.com",
   },
 }
 
@@ -137,7 +137,7 @@ export default function RootLayout({
                 addressCountry: "AR",
               },
               telephone: ["+54 9 11 5806-6309", "+54 9 11 5504-8023"],
-              url: "https://ggl-refrigeracion.vercel.app",
+              url: "https://gglrefrigeracion.com",
               image: "/logo.png",
               priceRange: "$$",
               aggregateRating: {
