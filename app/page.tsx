@@ -5,6 +5,8 @@ import { BrandsSection } from "@/components/brands-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
+import { GallerySection } from "@/components/gallery-section"
+import { PromotionSection } from "@/components/promotion-section"
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <Header />
       <HeroSection />
       <ServicesSection />
+      <PromotionSection />
+      <GallerySection />
       <BrandsSection />
       <ContactSection />
       <Footer />

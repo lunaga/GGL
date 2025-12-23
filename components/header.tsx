@@ -125,6 +125,18 @@ export function Header() {
                 onClick={() => scrollToSection("productos")}
                 className="block w-full text-left px-3 py-2 text-base font-medium hover:text-primary transition-colors"
               >
+                Promoción
+              </button>
+              <button
+                onClick={() => scrollToSection("galeria")}
+                className="block w-full text-left px-3 py-2 text-base font-medium hover:text-primary transition-colors"
+              >              
+                Galería
+              </button>
+              <button
+                onClick={() => scrollToSection("productos")}
+                className="block w-full text-left px-3 py-2 text-base font-medium hover:text-primary transition-colors"
+              >
                 Productos
               </button>
               <button

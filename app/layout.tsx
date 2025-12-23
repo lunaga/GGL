@@ -1,12 +1,23 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+import { Inter } from "next/font/google"
+import { JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { ThemeProvider } from "@/components/theme-provider"
-import "./globals.css";
+import "./globals.css"
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title:
@@ -14,6 +25,7 @@ export const metadata: Metadata = {
   description:
     "Servicio técnico especializado en General San Martín con más de 30 años de experiencia. Instalación y reparación de aires acondicionados, heladeras comerciales y familiares, cámaras frigoríficas de baja y media temperatura, lavarropas. Fabricación a medida de equipos de refrigeración comercial. Service autorizado de marcas: LG, Samsung, BGH, Electra, Whirlpool, Carrier. Atención inmediata por WhatsApp.",
   generator: "v0.app",
+  metadataBase: new URL("https://gglrefrigeracion.com"),
   keywords: [
     // Aires acondicionados
     "instalación aires acondicionados General San Martín",
@@ -120,14 +132,9 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        {/* Íconos */}
-        <link rel="icon" href="/logo1.svg" type="image/svg" />
+        <link rel="icon" href="/logo.png" type="image/png" />
         <link rel="apple-touch-icon" href="/logo.png" />
 
-        {/* ✅ Estilos globales cargados desde /public */}
-        <link rel="stylesheet" href="/globals.css" />
-
-        {/* SEO / Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -145,7 +152,7 @@ export default function RootLayout({
               },
               telephone: ["+54 9 11 5806-6309", "+54 9 11 5504-8023"],
               url: "https://gglrefrigeracion.com",
-              image: "/logo.png",
+              image: "https://gglrefrigeracion.com/logo.png",
               priceRange: "$$",
               aggregateRating: {
                 "@type": "AggregateRating",
@@ -170,8 +177,7 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Instalación de Aires Acondicionados",
-                      description:
-                        "Instalación profesional de equipos split y centrales",
+                      description: "Instalación profesional de equipos split y centrales",
                     },
                   },
                   {
@@ -187,8 +193,7 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Reparación de Heladeras Comerciales",
-                      description:
-                        "Service técnico de heladeras comerciales y familiares",
+                      description: "Service técnico de heladeras comerciales y familiares",
                     },
                   },
                   {
@@ -196,8 +201,7 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Instalación y Mantenimiento de Cámaras Frigoríficas",
-                      description:
-                        "Cámaras de baja y media temperatura para uso comercial e industrial",
+                      description: "Cámaras de baja y media temperatura para uso comercial e industrial",
                     },
                   },
                   {
@@ -205,8 +209,7 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Fabricación de Heladeras Comerciales a Medida",
-                      description:
-                        "Diseño y fabricación de heladeras bajomesadas y verticales personalizadas",
+                      description: "Diseño y fabricación de heladeras bajomesadas y verticales personalizadas",
                     },
                   },
                   {
@@ -214,8 +217,7 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Reparación de Lavarropas",
-                      description:
-                        "Service técnico de lavarropas automáticos y semiautomáticos",
+                      description: "Service técnico de lavarropas automáticos y semiautomáticos",
                     },
                   },
                 ],
@@ -223,14 +225,7 @@ export default function RootLayout({
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday",
-                  ],
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
                   opens: "08:00",
                   closes: "20:00",
                 },
@@ -239,7 +234,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`font-sans ${inter.variable} ${jetbrainsMono.variable}`}>
         <ThemeProvider defaultTheme="light" storageKey="ggl-theme">
           <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
           <Analytics />
