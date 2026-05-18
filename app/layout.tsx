@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title:
-    "GGL Técnicas en Refrigeración | Instalación y Reparación de Aires, Heladeras y Cámaras Frigoríficas en General San Martín",
+    "GGL Refrigeración | Instalación y Reparación de Aires, Heladeras y Cámaras Frigoríficas en General San Martín",
   description:
     "Servicio técnico especializado en General San Martín con más de 30 años de experiencia. Instalación y reparación de aires acondicionados, heladeras comerciales y familiares, cámaras frigoríficas de baja y media temperatura, lavarropas. Fabricación a medida de equipos de refrigeración comercial. Service autorizado de marcas: LG, Samsung, BGH, Electra, Whirlpool, Carrier. Atención inmediata por WhatsApp.",
   generator: "v0.app",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     "técnicas en refrigeración",
     "servicio técnico especializado",
   ].join(", "),
-  authors: [{ name: "GGL Técnicas en Refrigeración" }],
+  authors: [{ name: "GGL Refrigeración" }],
   creator: "LunagaDev",
   publisher: "GGL Técnicas en Refrigeración",
   robots: {
@@ -100,8 +100,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://gglrefrigeracion.com",
-    siteName: "GGL Técnicas en Refrigeración",
-    title: "GGL Técnicas en Refrigeración | Instalación y Reparación de Aires, Heladeras y Cámaras Frigoríficas",
+    siteName: "GGL Refrigeración",
+    title: "GGL Refrigeración | Instalación y Reparación de Aires, Heladeras y Cámaras Frigoríficas",
     description:
       "Más de 30 años de experiencia en General San Martín. Instalación y reparación de aires acondicionados, heladeras comerciales, cámaras frigoríficas. Service autorizado de todas las marcas.",
     images: [
@@ -115,7 +115,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GGL Técnicas en Refrigeración | Service Especializado en General San Martín",
+    title: "GGL Refrigeración | Service Especializado en General San Martín",
     description: "Más de 30 años de experiencia. Instalación y reparación de aires, heladeras y cámaras frigoríficas.",
     images: ["/logo.png"],
   },
@@ -141,7 +141,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "GGL Técnicas en Refrigeración",
+              name: "GGL Refrigeración",
               description:
                 "Servicio técnico especializado con más de 30 años de experiencia en instalación y reparación de aires acondicionados, heladeras comerciales y familiares, cámaras frigoríficas de baja y media temperatura, lavarropas. Fabricación a medida de equipos de refrigeración comercial.",
               address: {
